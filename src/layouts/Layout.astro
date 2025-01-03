@@ -1,22 +1,33 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>ChatBLT</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>ChatBLT</title>
+  </head>
+  <body>
+    <slot />
+    <div class="footer">ChatBLT</div>
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer {
+    display: grid;
+    place-items: center;
+    color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+	padding-bottom: 5em;
+    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+      Arial, sans-serif;
+  }
 </style>
