@@ -7,7 +7,6 @@ const db = await connectToDatabase();
 const collection = db.collection("Recipes");
 const data = await collection.aggregate([{ $sample: { size: 1 } }]).toArray();
 const recipe = data.length === 1 ? formatRecipe(data[0].recipe) : null;
-
 ---
 
 <div id="container">
@@ -23,8 +22,7 @@ const recipe = data.length === 1 ? formatRecipe(data[0].recipe) : null;
                 </div>
             </div>
             <div id="recipe-container">
-                <div class="recipe" set:html={recipe}>
-                </div>
+                <div class="recipe" set:html={recipe} />
             </div>
         </section>
     </main>
@@ -115,7 +113,10 @@ const recipe = data.length === 1 ? formatRecipe(data[0].recipe) : null;
         opacity: 0;
         position: absolute;
         z-index: -1;
-        transition: opacity 2s ease, visibility 2s ease, position 2s ease;
+        transition:
+            opacity 2s ease,
+            visibility 2s ease,
+            position 2s ease;
         align-self: start;
     }
 
@@ -132,6 +133,9 @@ const recipe = data.length === 1 ? formatRecipe(data[0].recipe) : null;
     }
 
     @media screen and (max-width: 768px) {
+        #container {
+            min-height: 80vh;
+        }
         .recipe {
             padding-top: 1em;
         }

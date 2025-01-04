@@ -9,7 +9,9 @@
   </head>
   <body>
     <slot />
-    <div class="footer">ChatBLT</div>
+    <div class="footer">
+      <a href="https://github.com/tom-draper/chatblt" target="_blank">ChatBLT</a>
+    </div>
   </body>
 </html>
 
@@ -29,5 +31,13 @@
 	padding-bottom: 5em;
     font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
       Arial, sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgba(0, 0, 0, 0.2);
   }
 </style>
