@@ -1,5 +1,13 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-// https://astro.build/config
-export default defineConfig({});
+import node from "@astrojs/node";
+
+export default defineConfig({
+    //This will enable SSR
+    output: "server",
+
+    adapter: node({
+        mode: "standalone",
+    }),
+});
