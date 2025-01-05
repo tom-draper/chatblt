@@ -1,43 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>ChatBLT</title>
-  </head>
-  <body>
-    <slot />
-    <div class="footer">
-      <a href="https://github.com/tom-draper/chatblt" target="_blank">ChatBLT</a>
-    </div>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="ChatBLT - Find your next sandwich." />
+        <meta
+            name="keywords"
+            content="ChatBLT sandwich sandwiches ChatGPT AI OpenAI food ingredients"
+        />
+        <meta name="author" content="Tom Draper" />
+        <meta property="og:title" content="ChatBLT" />
+        <meta
+            property="og:description"
+            content="ChatBLT - Find your next sandwich."
+        />
+        <meta
+            property="og:url"
+            content="https://github.com/tom-draper/chatblt"
+        />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://github.com/tom-draper/chatblt" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <title>ChatBLT</title>
+    </head>
+    <body>
+        <slot />
+        <div class="footer">
+            <img src="/favicon.svg" alt="ChatBLT logo" width="24" height="24" />
+            <a href="https://github.com/tom-draper/chatblt" target="_blank"
+                >ChatBLT</a
+            >
+        </div>
+    </body>
 </html>
 
 <style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
 
-  .footer {
-    display: grid;
-    place-items: center;
-    color: rgba(0, 0, 0, 0.3);
-    width: 100%;
-	padding-bottom: 5em;
-    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
-      Arial, sans-serif;
-  }
+    .footer {
+        display: grid;
+        place-items: center;
+        color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
+            "Nimbus Sans", Arial, sans-serif;
+    }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  a:hover {
-    color: rgba(0, 0, 0, 0.2);
-  }
+    a {
+        color: inherit;
+        text-decoration: none;
+        padding-top: 0.75em;
+    }
+    a:hover {
+        color: rgba(0, 0, 0, 0.2);
+    }
 </style>
