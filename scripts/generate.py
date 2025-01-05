@@ -20,7 +20,7 @@ client = OpenAI(
 MODEL = "gpt-4o"
 
 for _ in range(5):
-    prompt = f"""What sandwich should I make? Pick a completely random one, and format the resulting text with some HTML tags. Only use HTML tags for formatting, do not create a full HTML document. Only output this HTML. Do not mention the sandwich is random. Title it with a h2 tag with the name of the sandwich."""
+    prompt = f"""What sandwich should I make? Pick a completely random and tasty one, and format the resulting text with some HTML tags. Do not give me a sandwich you would have thought of before. Only use HTML tags for formatting, do not create a full HTML document. Only output this HTML. Do not mention the sandwich is random. Title it with a h2 tag with the name of the sandwich."""
     response = client.chat.completions.create(
         model=MODEL,
         messages=[
